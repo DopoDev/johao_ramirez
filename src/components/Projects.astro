@@ -7,7 +7,8 @@ import LinkButton from "./LinkButton.astro"
 import java from "./icons/java.astro"
 import spring from "./icons/spring.astro"
 import postgres from "./icons/postgres.astro"
-import { isJSDocVariadicType } from "typescript"
+import postman from "./icons/postman.astro"
+import react from "./icons/react.astro"
 
 const TAGS = {
   NEXT: {
@@ -27,37 +28,48 @@ const TAGS = {
   },
   JAVA:{
     name: "Java",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#005A8D] text-white",
     icon: java,
   },
   SPRING:{
     name: "Spring",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#006400] text-white",
     icon: spring,
   },
   POSTGRES:{
     name: "Postgres",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#001B3D] text-white",
     icon: postgres,
+  },
+  POSTMAN:{
+    name: "Postman",
+    class: "bg-[#E64A19] text-white",
+    icon: postman,
+  },
+  REACT:{
+    name: "React",
+    class: "bg-[#4FA3D1] text-white",
+    icon: react,
   }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Salar.io - Plataforma de gestión de salarios",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Pagina donde se puede calcular, guardar y gestionar los salarios a partir de las horas trabajadas y el salario base del trabajador. Creada desde cero con Java, Spring, PostgreSQL, Postman y Tailwind CSS.",
+    link: "about:blank",
+    github: "https://github.com/DopoDev/salario",
+    image: "/projects/salar.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRES, TAGS.POSTMAN],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "AdminHotel - Gestor Hotelero",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Gestor hotelero, el cual buscaba simplificar el trabajo de los empleados. Creada desde cero con Java, Spring, PostgreSQL, Postman y React.",
+    link: "about:blank",
+    github: "https://github.com/DopoDev/adminhotel",
+    image: "/projects/adminHotel_img.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRES, TAGS.REACT, TAGS.TAILWIND],
   },
 ]
 ---
@@ -68,7 +80,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Imagen de App" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
